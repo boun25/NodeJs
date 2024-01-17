@@ -1,0 +1,38 @@
+Jusque là nous utilisé JavaScript coté client. A partir de maintenant, il sera utilisé coté serveur. Si Javascript était initialement conç pour fonctionnner avec des pages web, des outils plus récents ont élargi ses capacités. Nos js permet ainsi de l'utiliser pour créer des applications web complexes.
+Fonctionnement d'un serveur
+1. Comprendre l'architecture client-serveur
+Le web repose sur une architecture duale: un client se connecte à un serveur puis ils échangent des informations. Chaque acteur est identifié par sa fonction, qui lui est propre: le client envoie des requêtes que le serveur va traiter avant de renvoyer une réponse.
+OBLEMS
+2.3
+Le terme client désigne tout logiciel capable d'envoyer des requêtes. exemple: postman. Cette définition large englobe notamment les navigateurs web Iqui permeteent à un utilisateur de charger et d'afficher des page web, les applications mobiles ou certains jeux en ligne comme World of Warcraft sont égatement des client 
+
+par analogie , le serveur est le logiciel qui traite les requetes du client et renvoi une reponce. par extention , 
+​
+terme serveur est souvent utiliser pour désigner les machines qui exécutent ce type de programme.
+Les requêtes sont des messages qui contiennent des instructions. Les deux requêtes les plus utilisées sont les requêtes GET et les requêtes POST.
+Le client envoie des requêtes GET à un serveur lorsqu'il souhaite accéder à une page web (ressource). Ainsi lorsqu'un internaute clique sur un lien hypertexte son navigateur web envoie une requete GET à un serveur
+un formulaire html est contenu entre une paire de balise <form> .ce dernier contient au moint un element avec lequel l'utilisateur interagit et un bouton de validation. un Code clic sur ce dernier va déclencher l'envoi d'une requête POST contenant la valeur entrée. Celle-ci est visible avec un logiciel comme Firebug (Outil Developper du navigateur).
+
+Le serveur quant à lui reçoit les requêtes et y répond, la réponse va la plupart du temps contenir une page HTML qui a été demandée par le client. Il arrive cependant que le client demande des pages qui n'existent pas. Dans ce cas là, la réponse du serveur est un message d'erreur, la fameuse erreur 404. Il existe une typologie des requêtes et réponses possibles, qu'il n'est pas nécessaire de connaitre pour débuter le codage web.
+
+2. Node.js pour programmer en JavaScript coté serveur 
+pour concevoir des aplication web , nous avons besoin d'un serveur .ce dernier prend la forme d'un logiciel qui peut etre installé sur n'implorte quel ordinateur le rendre capable de traiter des requêtes et d'y répondre. Il existe plusieurstypes de logiciels serveur, à l'instar Apache ou encore Nginx, le choix est porté sur Node.js.
+
+Node, créee en 2009 par Ryan Dahl est un logiciel open source qui permet entre autres, de créer des applications web en servant de serveur HTTP. Bien que très récent à l'échelle de l'histoire informatique, il est aujourd'hui utilisé par les plus grandes entreprises du monde. Elles apprécient en particulier sa performance : Node.js est à même de gérer des applications qui connaissent un très fort trafic en consommant très peu de ressources matérielles.
+
+Node.js est en outre particulèrement adapté pour découvrir le développement web. Il se programme en JavaScript et permet d'obtenir un serveur opérationnel en quelques minutes, sans nécessiter de réglages complexes. 
+Node.js évolue constamment et il existe actuellement en plusieurs versions qui identifiables par des numéros.
+3.1 Installation de Node.js
+3.2 Instaaler un module tierces avec npm
+PROBLEMS
+HAULS56
+L'ultime étape avant de commencer l'utilisation de Node.js est d'installer Express. Il s'agit d'un module tiers qui permet comme son nom l'indique, d'accélérer le développement d'une application en simplifiant la programmation decertaines tâches usuelles. Express a notamment été utilisé par Netflix.
+Son installation se fait à l'aide de Node package Manager (npm). Syntaxe: npm install express
+
+
+**Distribuer des fichier statique**
+
+lorsqu'une page web est demandée par un client , ce dermier émet une requete get .si la page omporte des element externe comme des imagesnécessiterait l'envoi de trois requête GET pour être chargée et affichée. Ces fichiers qui doivent être chargés portent le nom de fichiers statiques, pour les différencier des fichiers qui sont crées par le serveur à la demande du client. Une première approche pour les rendre accessible consisterait à créer une route GET par fichier statique.
+pour reprendre l'exemple précédent , nous allons créer une application qui affiche une page web av deux images qui sont placées dans un dossier img
+
+*****commende cls poiur nettoye les commendes presedente  
